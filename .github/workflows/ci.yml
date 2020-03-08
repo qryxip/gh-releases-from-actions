@@ -58,7 +58,7 @@ jobs:
 
       - name: grcov
         id: grcov
-        uses: qryxip/grcov@a8608607ab426813764e8cdb024718af9a795a07
+        uses: qryxip/grcov@c93a77cf727d57f0930925dfc5972dcd77d28147
 
       - name: Codecov
         uses: codecov/codecov-action@v1
