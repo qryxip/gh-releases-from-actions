@@ -224,7 +224,7 @@ jobs:
 
       - name: Prefix
         id: prefix
-        run: echo "::set-output name=prefix::gh-releases-from-actions${GITHUB_REF#refs/tags/}-"
+        run: echo "::set-output name=prefix::gh-releases-from-actions-${GITHUB_REF#refs/tags/}-"
 
       - name: Download `${{ steps.prefix.outputs.prefix }}x86_64-pc-windows-msvc.zip`
         uses: actions/download-artifact@v1
