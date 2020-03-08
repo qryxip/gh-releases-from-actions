@@ -212,7 +212,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: ${{ steps.artifact.outputs.artifact }}
-          path: ./${{ steps.artifact.outputs.artifact }}
+          path: .
 
   release:
     name: GitHub Release
