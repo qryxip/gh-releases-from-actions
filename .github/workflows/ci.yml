@@ -47,6 +47,9 @@ jobs:
           profile: minimal
           default: true
 
+      - name: Modify `package.name`
+        run: sed -i 's/"gh-releases-from-actions"/"gh_releases_from_actions"/' ./Cargo.toml
+
       - name: '`cargo test --no-fail-fast`'
         uses: actions-rs/cargo@v1
         with:
@@ -55,9 +58,6 @@ jobs:
         env:
           CARGO_INCREMENTAL: '0'
           RUSTFLAGS: '-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads'
-
-      - name: Modify `package.name`
-        run: cat ./Cargo.toml | sed -r 's/name = "gh-releases-from-actions"/name = "gh_releases_from_actions"/' > ./Cargo.toml
 
       - name: grcov
         id: grcov
