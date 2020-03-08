@@ -58,7 +58,7 @@ jobs:
 
       - name: grcov
         id: grcov
-        uses: qryxip/grcov@replace-multiple-hyphens
+        uses: qryxip/grcov@tag-for-replace-multiple-hyphens-d
 
       - name: Codecov
         uses: codecov/codecov-action@v1
