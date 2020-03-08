@@ -56,12 +56,9 @@ jobs:
           CARGO_INCREMENTAL: '0'
           RUSTFLAGS: '-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Zno-landing-pads'
 
-      - name: '`ls -la ./target/debug/deps`'
-        run: ls -la ./target/debug/deps
-
       - name: grcov
         id: grcov
-        uses: actions-rs/grcov@v0.1
+        uses: qryxip/grcov@a8608607ab426813764e8cdb024718af9a795a08
 
       - name: Codecov
         uses: codecov/codecov-action@v1
