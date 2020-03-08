@@ -61,7 +61,7 @@ jobs:
 
       - name: grcov
         id: grcov
-        uses: actions-rs/grcov@0.1
+        uses: actions-rs/grcov@v0.1
 
       - name: Restore `package.name`
         run: git checkout .
